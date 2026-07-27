@@ -10,7 +10,7 @@ def scrape_characters() -> list[Character]:
 
     characters = []
     while next_url_to_scrape is not None:
-        time.sleep(1) # Add timeout to prevent rate limiting by the API
+        time.sleep(1)  # Add timeout to prevent rate limiting by the API
         characters_response = requests.get(next_url_to_scrape).json()
 
         for character_dict in characters_response["results"]:
